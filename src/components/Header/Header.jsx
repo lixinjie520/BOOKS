@@ -1,40 +1,42 @@
 import React from "react";
 import styles from "./Header.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
-    <nav className="navbar sticky-top navbar-expand-lg bg-light">
-      <div className="container-fluid">
-        <a className={`navbar-brand ${styles.navbarBrand}`} href="#">
-          My Booklist
-        </a>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
+    <header className={styles.header}>
+      <nav className={styles.navbar}>
+        <div className={styles.home}>
+          <a className={styles.homeAnchor} href="#">
+            My Booklist
+          </a>
+          <ul className={styles.navbarList}>
+            <li className={styles.item}>
+              <a className="nav-link" aria-current="page" href="#">
+                About
               </a>
             </li>
-            <li className="nav-item">
+            <li className={styles.item}>
               <a className="nav-link" href="#">
                 Favorite
               </a>
             </li>
           </ul>
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
-      </div>
-    </nav>
+        <form className={styles.searchForm}>
+          <input
+            className={styles.searchInput}
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button className={styles.btn} type="submit">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
+        </form>
+      </nav>
+    </header>
   );
 };
 
