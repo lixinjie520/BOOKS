@@ -1,22 +1,86 @@
 .container {
+  width: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
-  margin-top: 80px;
+  margin: 80px auto 50px;
 }
 
 .card {
+  flex: 0 1 320px;
+  height: 500px;
+  border: 1px solid hsla(0, 0%, 56%, 0.591);
+  border-radius: 10px;
+  overflow: hidden;
   margin: 10px;
-  border: 1px solid hsla(0, 0%, 50%, 0.2);
-  border-radius: 5px;
-  flex: 0 1 18rem;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 5px 1px rgb(210, 209, 245);
+}
+
+.image {
+  width: 100%;
+  height: 70%;
+  border-bottom: 1px solid gainsboro;
+}
+
+.image:hover {
+  cursor: pointer;
 }
 
 .cardBody {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.cardImage {
-  width: 100%;
-  height: 55%;
+.title {
+  width: 80%;
+  font-size: 1.25rem;
+  transition: all 0.2s ease;
+  color: rgba(255, 166, 0, 0.866);
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+.author {
+  font-size: 1rem;
+  color: rgba(0, 55, 255, 0.814);
+}
+
+.author:hover {
+  cursor: pointer;
+  color: rgb(0, 55, 255);
+}
+
+.title,
+.author {
+  text-align: center;
+}
+
+.btn {
+  width: 80%;
+  height: 40px;
+  background-color: rgba(0, 0, 255, 0.362);
+  border-radius: 5px;
+  color: white;
+  font-size: 1.25rem;
+  margin-top: 10px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.611);
 }

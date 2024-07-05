@@ -6,19 +6,12 @@ const Card = () => {
   return (
     <div className={styles.container}>
       {books.map((book) => (
-        <div className={styles.card} key={book.id}>
-          <img
-            src={book.image}
-            className={`card-img-top ${styles.cardImage}`}
-            alt="book cover"
-          />
-
-          <div className={`card-body ${styles.cardBody}`}>
-            <h5 className="card-title">{book.name}</h5>
-            <p className="card-author">Author : {book.author}</p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
-            </a>
+        <div href="#" className={styles.card} key={book.id}>
+          <img src={book.image} alt="book cover" className={styles.image} />
+          <div className={styles.cardBody}>
+            <h1 className={styles.title}>{book.title}</h1>
+            <h2 className={styles.author}>{book.author}</h2>
+            <button className={styles.btn}>更多</button>
           </div>
         </div>
       ))}
